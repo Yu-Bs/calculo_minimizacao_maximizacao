@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container-background">
+        <div class="container">
+            <h1>Resultado da Otimização</h1>
+            <p>Quantidade de A: {{ valor_a }}</p>
+            <p>Quantidade de B: {{ valor_b }}</p>
+            <p>Lucro máximo: {{ lucro }}</p>
+            <a href="/">Voltar</a>
+        </div>
+    </div>
+</body>
+
+</html>

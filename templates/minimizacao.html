@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Minimização de custo</title>
+</head>
+
+<body>
+    <div class="container-background">
+        <div class="container">
+            <h1>Problema de Minimização</h1>
+            <form action="/resultadoMin" method="post">
+                <h3>Função Objetivo: Min Custo = A * ( ) + B * ( )</h3>
+
+                <div class="form-group">
+                    <label>Coeficiente de A:</label>
+                    <input type="number" step="any" name="lucro_a" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Coeficiente de B:</label>
+                    <input type="number" step="any" name="lucro_b" required>
+                </div>
+
+                <h3>Restrição 1: A * ( ) + B * ( ) ≤ ( )</h3>
+                <div class="form-group">
+                    <label>Coeficiente de A: </label>
+                    <input type="number" step="any" name="r1_a" required>
+
+                </div>
+                <div class="form-group">
+                    <label>Coeficiente de B: </label>
+                    <input type="number" step="any" name="r1_b" required>
+                </div>
+                <div class="form-group">
+                    <label>Limite: </label>
+                    <input type="number" step="any" name="r1_limite" required>
+                </div>
+
+                <h3>Restrição 2: A * ( ) + B * ( ) ≤ ( )</h3>
+                <div class="form-group">
+                    <label>Coeficiente de A: </label>
+                    <input type="number" step="any" name="r2_a" required>
+                </div>
+                <div class="form-group">
+                    <label>Coeficiente de B: </label>
+                    <input type="number" step="any" name="r2_b" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Limite:</label>
+                    <input type="number" step="any" name="r2_limite" required>
+                </div>
+
+                <h3>Defina os valores mínimos a serem produzidos</h3>
+                <div class="form-group">
+                    <label>Mínimo de A:</label>
+                    <input type="number" step="any" name="min_a" required>
+                </div>
+                <div class="form-group">
+                    <label>Mínimo de B:</label>
+                    <input type="number" step="any" name="min_b" required>
+                </div>
+                <div class="button-style">
+                    <button type="submit" class="button">Calcular</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
