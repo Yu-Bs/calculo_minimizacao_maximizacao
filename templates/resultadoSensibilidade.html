@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da Análise de Sensibilidade</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container-background">
+        <div class="container">
+            <h1 style="text-align: center;">Resultado da Otimização com Análise de Sensibilidade</h1>
+
+            <p><strong>Quantidade de A:</strong> {{ valor_a }}</p>
+            <p><strong>Quantidade de B:</strong> {{ valor_b }}</p>
+            <p><strong>Lucro máximo:</strong> {{ lucro }}</p>
+
+            <h2>Análise de Sensibilidade</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Restrição</th>
+                        <th>Preço Sombra (Dual)</th>
+                        <th>Folga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in analise %}
+                    <tr>
+                        <td>{{ item.nome }}</td>
+                        <td>{{ item.preco_sombra }}</td>
+                        <td>{{ item.folga }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <div style="margin-top: 20px;">
+                <a href="/">Voltar</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
